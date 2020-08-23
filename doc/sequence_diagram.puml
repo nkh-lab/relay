@@ -1,0 +1,46 @@
+@startuml
+participant User
+participant Relay
+participant Scheduler
+
+alt Not initilized/deinitialized RELAY module
+
+User -> Relay : RELAY_is_inited() = FALSE
+User -> Relay : RELAY_get_state() = FALSE
+User -> Relay : RELAY_get_error() = FALSE
+User -> Relay : RELAY_add_state_listener() = FALSE
+User -> Relay : RELAY_add_error_listener() = FALSE
+
+end
+
+alt Correct initilized RELAY module
+
+User -> Relay : RELAY_init()
+User -> Relay : RELAY_is_inited() = TRUE
+User -> Relay : RELAY_add_state_listener()
+User -> Relay : RELAY_add_error_listener()
+User -> Scheduler : add RELAY_routine() to scheduler
+activate Scheduler
+
+Scheduler -> Scheduler : RELAY_routine(SELF_CHECK)
+
+Scheduler -> User : callback to error_listener() if SELF_CHECK == NOK
+deactivate Scheduler
+
+User -> Relay : RELAY_get_state()
+User -> Relay : RELAY_get_error()
+
+User -> Relay : RELAY_close() || RELAY_open()
+
+
+Relay -> Scheduler : RELAY_routine(SWITCHING_CHECK)
+activate Scheduler
+
+Scheduler -> User: callback to error_listener() if SWITCHING == NOK
+Scheduler -> User: callback to state_listener() if SWITCHING == OK
+deactivate Scheduler
+
+User -> Relay : RELAY_deinit()
+
+end
+@enduml

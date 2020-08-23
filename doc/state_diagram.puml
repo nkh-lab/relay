@@ -1,0 +1,39 @@
+@startuml
+state NOT_INIT
+state OPEN #dfc
+state OPEN_TO_CLOSE #dfc
+state CLOSE #dfc
+state CLOSE_TO_OPEN #dfc
+state ERROR_CONST_OPEN #ffcccb
+state ERROR_WELDED #ffcccb
+state DEINIT
+
+state c <<choice>>
+
+[*] --> NOT_INIT
+NOT_INIT --> c : RELAY_init()
+c --> OPEN : type == RELAY_type_NO
+c --> CLOSE : type == RELAY_type_NC
+
+OPEN --> OPEN_TO_CLOSE : RELAY_open()
+OPEN --> ERROR_WELDED : SELF_CHECK == NOK
+OPEN --> DEINIT : RELAY_deinit()
+
+OPEN_TO_CLOSE --> CLOSE: OK
+OPEN_TO_CLOSE --> ERROR_CONST_OPEN : NOK
+OPEN_TO_CLOSE --> DEINIT : RELAY_deinit()
+
+CLOSE --> CLOSE_TO_OPEN : RELAY_open()
+CLOSE --> ERROR_CONST_OPEN : SELF_CHECK == NOK
+CLOSE --> DEINIT : RELAY_deinit()
+
+CLOSE_TO_OPEN --> OPEN: OK
+CLOSE_TO_OPEN --> ERROR_WELDED : NOK
+CLOSE_TO_OPEN --> DEINIT : RELAY_deinit()
+
+ERROR_CONST_OPEN --> DEINIT : RELAY_deinit()
+
+ERROR_WELDED --> DEINIT : RELAY_deinit()
+
+DEINIT --> NOT_INIT
+@enduml

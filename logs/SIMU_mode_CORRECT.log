@@ -1,0 +1,630 @@
+Hello World from Relay project
+SIMU_init(mode: SIMU_mode_CORRECT)
+ 
+not_init_test()
+RELAY_is_inited()
+RELAY_open(relay_id: 0): 0
+RELAY_close(relay_id: 0): 0
+RELAY_get_state(relay_id: 0): 0
+RELAY_add_state_listener(relay_id: 0, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 0, listener_id: 0): 0
+RELAY_open(relay_id: 1): 0
+RELAY_close(relay_id: 1): 0
+RELAY_get_state(relay_id: 1): 0
+RELAY_add_state_listener(relay_id: 1, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 1, listener_id: 0): 0
+RELAY_open(relay_id: 2): 0
+RELAY_close(relay_id: 2): 0
+RELAY_get_state(relay_id: 2): 0
+RELAY_add_state_listener(relay_id: 2, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 2, listener_id: 0): 0
+RELAY_open(relay_id: 3): 0
+RELAY_close(relay_id: 3): 0
+RELAY_get_state(relay_id: 3): 0
+RELAY_add_state_listener(relay_id: 3, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 3, listener_id: 0): 0
+  PASSED: not_init_test()
+ 
+RELAY_init()
+log_config()
+Relay[0] config:
+  type: NO
+  control_index: 0
+  feedback_index: 0
+  response_ms: 10
+Relay[1] config:
+  type: NC
+  control_index: 1
+  feedback_index: 1
+  response_ms: 5
+Relay[2] config:
+  type: NO
+  control_index: 0
+  feedback_index: 16
+  response_ms: 10
+Relay[3] config:
+  type: NC
+  control_index: 1
+  feedback_index: 16
+  response_ms: 5
+init_state_machine(relay_id: 0)
+init_state_machine(relay_id: 1)
+init_state_machine(relay_id: 2)
+init_state_machine(relay_id: 3)
+ 
+add_listeners_test()
+RELAY_add_state_listener(relay_id: 0, listener_id: 0): 1
+RELAY_add_state_listener(relay_id: 0, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 0, listener_id: 0): 1
+RELAY_add_error_listener(relay_id: 0, listener_id: 0): 0
+RELAY_add_state_listener(relay_id: 1, listener_id: 0): 1
+RELAY_add_state_listener(relay_id: 1, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 1, listener_id: 0): 1
+RELAY_add_error_listener(relay_id: 1, listener_id: 0): 0
+RELAY_add_state_listener(relay_id: 2, listener_id: 0): 1
+RELAY_add_state_listener(relay_id: 2, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 2, listener_id: 0): 1
+RELAY_add_error_listener(relay_id: 2, listener_id: 0): 0
+RELAY_add_state_listener(relay_id: 3, listener_id: 0): 1
+RELAY_add_state_listener(relay_id: 3, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 3, listener_id: 0): 1
+RELAY_add_error_listener(relay_id: 3, listener_id: 0): 0
+  PASSED: add_listeners_test()
+ 
+ 
+get_state_test()
+RELAY_get_state(relay_id: 0): 1
+RELAY_get_state(relay_id: 1): 2
+RELAY_get_state(relay_id: 2): 1
+RELAY_get_state(relay_id: 3): 2
+  PASSED: get_state_test()
+ 
+get_error_test()
+RELAY_get_error(relay_id: 0): 0
+RELAY_get_error(relay_id: 1): 0
+RELAY_get_error(relay_id: 2): 0
+RELAY_get_error(relay_id: 3): 0
+  PASSED: get_error_test()
+ 
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+ 
+get_state_test()
+RELAY_get_state(relay_id: 0): 1
+RELAY_get_state(relay_id: 1): 2
+RELAY_get_state(relay_id: 2): 1
+RELAY_get_state(relay_id: 3): 2
+  PASSED: get_state_test()
+ 
+get_error_test()
+RELAY_get_error(relay_id: 0): 0
+RELAY_get_error(relay_id: 1): 0
+RELAY_get_error(relay_id: 2): 0
+RELAY_get_error(relay_id: 3): 0
+  PASSED: get_error_test()
+ 
+ 
+open_test()
+open_state(relay_id: 0, event: 0): 0
+RELAY_open(relay_id: 0): 1
+close_state(relay_id: 1, event: 0): 1
+RELAY_open(relay_id: 1): 1
+open_state(relay_id: 2, event: 0): 0
+RELAY_open(relay_id: 2): 1
+close_state(relay_id: 3, event: 0): 1
+RELAY_open(relay_id: 3): 1
+  PASSED: open_test()
+ 
+open_state(relay_id: 0, event: 2): 0
+close_to_open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_to_open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_to_open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+close_to_open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+close_to_open_state(relay_id: 1, event: 2): 1
+open_state(relay_id: 2, event: 2): 0
+close_to_open_state(relay_id: 3, event: 2): 1
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+ 
+on_state_changed(relay_id: 1, state: 1)
+ 
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+ 
+on_state_changed(relay_id: 3, state: 1)
+ 
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_state(relay_id: 0, event: 2): 0
+open_state(relay_id: 1, event: 2): 0
+open_state(relay_id: 2, event: 2): 0
+open_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+ 
+close_test()
+open_state(relay_id: 0, event: 1): 1
+RELAY_close(relay_id: 0): 1
+open_state(relay_id: 1, event: 1): 1
+RELAY_close(relay_id: 1): 1
+open_state(relay_id: 2, event: 1): 1
+RELAY_close(relay_id: 2): 1
+open_state(relay_id: 3, event: 1): 1
+RELAY_close(relay_id: 3): 1
+  PASSED: close_test()
+open_to_close_state(relay_id: 0, event: 2): 0
+open_to_close_state(relay_id: 1, event: 2): 0
+open_to_close_state(relay_id: 2, event: 2): 0
+open_to_close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+open_to_close_state(relay_id: 0, event: 2): 0
+open_to_close_state(relay_id: 1, event: 2): 1
+open_to_close_state(relay_id: 2, event: 2): 0
+open_to_close_state(relay_id: 3, event: 2): 1
+RELAY_routine(): 1
+open_to_close_state(relay_id: 0, event: 2): 1
+ 
+on_state_changed(relay_id: 1, state: 2)
+ 
+close_state(relay_id: 1, event: 2): 0
+open_to_close_state(relay_id: 2, event: 2): 1
+ 
+on_state_changed(relay_id: 3, state: 2)
+ 
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+ 
+on_state_changed(relay_id: 0, state: 2)
+ 
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+ 
+on_state_changed(relay_id: 2, state: 2)
+ 
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+close_state(relay_id: 0, event: 2): 0
+close_state(relay_id: 1, event: 2): 0
+close_state(relay_id: 2, event: 2): 0
+close_state(relay_id: 3, event: 2): 0
+RELAY_routine(): 1
+ 
+RELAY_deinit()
+close_state(relay_id: 0, event: 3): 3
+deinit_state(relay_id: 0, event: 3): 1
+close_state(relay_id: 1, event: 3): 3
+deinit_state(relay_id: 1, event: 3): 1
+close_state(relay_id: 2, event: 3): 3
+deinit_state(relay_id: 2, event: 3): 1
+close_state(relay_id: 3, event: 3): 3
+deinit_state(relay_id: 3, event: 3): 1
+ 
+not_init_test()
+RELAY_is_inited()
+RELAY_open(relay_id: 0): 0
+RELAY_close(relay_id: 0): 0
+RELAY_get_state(relay_id: 0): 0
+RELAY_add_state_listener(relay_id: 0, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 0, listener_id: 0): 0
+RELAY_open(relay_id: 1): 0
+RELAY_close(relay_id: 1): 0
+RELAY_get_state(relay_id: 1): 0
+RELAY_add_state_listener(relay_id: 1, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 1, listener_id: 0): 0
+RELAY_open(relay_id: 2): 0
+RELAY_close(relay_id: 2): 0
+RELAY_get_state(relay_id: 2): 0
+RELAY_add_state_listener(relay_id: 2, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 2, listener_id: 0): 0
+RELAY_open(relay_id: 3): 0
+RELAY_close(relay_id: 3): 0
+RELAY_get_state(relay_id: 3): 0
+RELAY_add_state_listener(relay_id: 3, listener_id: 0): 0
+RELAY_add_error_listener(relay_id: 3, listener_id: 0): 0
+  PASSED: not_init_test()
+ 
+RELAY_routine(): 0
