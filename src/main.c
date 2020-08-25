@@ -30,8 +30,8 @@ int main(int argc, char* argv[])
     RELAY_config_T relays_config[RELAYS_NUMBER] = {
         {RELAY_type_NO, DO_index_00, DI_index_00, RESPONCE_10ms},
         {RELAY_type_NC, DO_index_01, DI_index_01, RESPONCE_5ms},
-        {RELAY_type_NO, DO_index_00, RELAY_WO_FEEDBACK, RESPONCE_10ms},
-        {RELAY_type_NC, DO_index_01, RELAY_WO_FEEDBACK, RESPONCE_5ms}
+        {RELAY_type_NO, DO_index_02, RELAY_WO_FEEDBACK, RESPONCE_10ms},
+        {RELAY_type_NC, DO_index_03, RELAY_WO_FEEDBACK, RESPONCE_5ms}
     };
 
     // Simulation settings

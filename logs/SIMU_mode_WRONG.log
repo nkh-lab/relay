@@ -39,12 +39,12 @@ Relay[1] config:
   response_ms: 5
 Relay[2] config:
   type: NO
-  control_index: 0
+  control_index: 2
   feedback_index: 16
   response_ms: 10
 Relay[3] config:
   type: NC
-  control_index: 1
+  control_index: 3
   feedback_index: 16
   response_ms: 5
 init_state_machine(relay_id: 0)
