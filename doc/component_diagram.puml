@@ -1,0 +1,18 @@
+@startuml
+node System
+
+System -> [Relay]: Control
+System <. [Relay]: Feedback
+
+note bottom of [Relay]
+    NO (Normally Open)
+    Open:   Control = OFF, Feedback = OFF
+    Closed: Control = ON,  Feedback = ON
+end note
+
+note bottom of [Relay]
+    NC (Normally Closed)
+    Open:   Control = ON,  Feedback = OFF
+    Closed: Control = OFF, Feedback = ON
+end note
+@enduml
